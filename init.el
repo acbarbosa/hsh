@@ -13,3 +13,7 @@
 (eval-after-load "color-theme"
   '(progn (color-theme-initialize)
           (color-theme-goldenrod)))
+
+;; Deactivating startup message
+(setq inhibit-startup-message t 
+ inhibit-startup-echo-area-message t)
