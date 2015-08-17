@@ -20,3 +20,6 @@
 
 ;; Deactivating backup files
 (setq make-backup-files nil)
+
+;; Activating windmove to cycle through windows 'Shift <arrow>'
+(windmove-default-keybindings)
