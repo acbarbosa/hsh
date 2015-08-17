@@ -23,3 +23,6 @@
 
 ;; Activating windmove to cycle through windows 'Shift <arrow>'
 (windmove-default-keybindings)
+
+;; Activating line numbering
+(global-linum-mode 1)
