@@ -17,3 +17,6 @@
 ;; Deactivating startup message
 (setq inhibit-startup-message t 
  inhibit-startup-echo-area-message t)
+
+;; Deactivating backup files
+(setq make-backup-files nil)
