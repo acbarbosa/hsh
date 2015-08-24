@@ -35,4 +35,4 @@
 
 ;; Load other configuration files
 (load "~/.emacs.d/magit-init")
-
+(load "~/.emacs.d/projectile-init")
