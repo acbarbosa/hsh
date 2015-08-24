@@ -21,8 +21,11 @@
 ;; Deactivating backup files
 (setq make-backup-files nil)
 
-;; Activating windmove to cycle through windows 'Shift <arrow>'
-(windmove-default-keybindings)
+;; Configurating windmove
+(global-set-key (kbd "C-c <left>")  'windmove-left)
+(global-set-key (kbd "C-c <right>") 'windmove-right)
+(global-set-key (kbd "C-c <up>")    'windmove-up)
+(global-set-key (kbd "C-c <down>")  'windmove-down)
 
 ;; Activating line numbering
 (global-linum-mode 1)
