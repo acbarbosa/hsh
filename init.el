@@ -32,3 +32,7 @@
 
 ;; Prevent Extraneous Tabs
 (setq-default indent-tabs-mode nil)
+
+;; Load other configuration files
+(load "~/.emacs.d/magit-init")
+
