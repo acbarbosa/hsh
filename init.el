@@ -33,8 +33,12 @@
 ;; Prevent Extraneous Tabs
 (setq-default indent-tabs-mode nil)
 
+;; Load flycheck
+(require 'flycheck)
+
 ;; Load other configuration files
 (load "~/.emacs.d/magit-init")
 (load "~/.emacs.d/projectile-init")
 (load "~/.emacs.d/copypaste")
+(load "~/.emacs.d/shell")
 
