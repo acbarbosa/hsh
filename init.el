@@ -36,9 +36,13 @@
 ;; Load flycheck
 (require 'flycheck)
 
+;; Configuring editorconfig
+(load "editorconfig")
+
 ;; Load other configuration files
 (load "~/.emacs.d/magit-init")
 (load "~/.emacs.d/projectile-init")
 (load "~/.emacs.d/copypaste")
 (load "~/.emacs.d/shell")
+(load "~/.emacs.d/javascript")
 
