@@ -45,4 +45,5 @@
 (load "~/.emacs.d/copypaste")
 (load "~/.emacs.d/shell")
 (load "~/.emacs.d/javascript")
+(load "~/.emacs.d/project-explorer")
 
