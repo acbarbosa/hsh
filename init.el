@@ -21,12 +21,6 @@
 ;; Deactivating backup files
 (setq make-backup-files nil)
 
-;; Configurating windmove
-(global-set-key (kbd "C-c <left>")  'windmove-left)
-(global-set-key (kbd "C-c <right>") 'windmove-right)
-(global-set-key (kbd "C-c <up>")    'windmove-up)
-(global-set-key (kbd "C-c <down>")  'windmove-down)
-
 ;; Activating line numbering
 (global-linum-mode 1)
 
@@ -47,6 +41,7 @@
 (load "~/.emacs.d/javascript")
 (load "~/.emacs.d/org-mode")
 (load "~/.emacs.d/project-explorer")
+(load "~/.emacs.d/windmove")
 
 (add-hook 'haskell-mode-hook 'turn-on-haskell-doc-mode)
 (add-hook 'haskell-mode-hook 'turn-on-haskell-indentation)
