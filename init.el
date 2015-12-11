@@ -45,5 +45,8 @@
 (load "~/.emacs.d/copypaste")
 (load "~/.emacs.d/shell")
 (load "~/.emacs.d/javascript")
+(load "~/.emacs.d/org-mode")
 (load "~/.emacs.d/project-explorer")
 
+(add-hook 'haskell-mode-hook 'turn-on-haskell-doc-mode)
+(add-hook 'haskell-mode-hook 'turn-on-haskell-indentation)
