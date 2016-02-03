@@ -32,6 +32,7 @@
 
 ;; Configuring editorconfig
 (load "editorconfig")
+(editorconfig-mode 1)
 
 ;; Load other configuration files
 (load "~/.emacs.d/magit-init")
