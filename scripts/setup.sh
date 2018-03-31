@@ -6,3 +6,7 @@ command -V brew > /dev/null 2>&1 || {
     brew cask install caskroom/fonts/font-hack
 }
 
+command -V /usr/local/bin/emacs > /dev/null 2>&1 || {
+    brew install emacs
+}
+
