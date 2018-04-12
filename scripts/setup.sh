@@ -15,4 +15,14 @@ if [ ! -e "/Applications/Google Chrome.app" ]; then
     brew cask install google-chrome
 fi
 
+if [ ! -e "/Applications/Skype.app" ]; then
+    brew cask install skype
+fi
 
+if [ ! -e "/Applications/1Password 6.app" ]; then
+    brew cask install 1password
+fi
+
+if [ ! -e "/Applications/Slack.app" ]; then
+    brew cask install slack
+fi
