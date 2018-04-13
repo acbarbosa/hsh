@@ -26,3 +26,8 @@ fi
 if [ ! -e "/Applications/Slack.app" ]; then
     brew cask install slack
 fi
+
+if [ ! -e "/Applications/IntelliJ IDEA.app" ]; then
+    brew cask install intellij-idea
+fi
+
