@@ -31,3 +31,10 @@ if [ ! -e "/Applications/IntelliJ IDEA.app" ]; then
     brew cask install intellij-idea
 fi
 
+java -version >/dev/null 2>&1 || {
+    brew cask install java
+}
+
+command -V gradle >/dev/null 2>&1 || {
+    brew install gradle
+}
