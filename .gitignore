@@ -4,3 +4,7 @@
 !scripts/**
 !.bashrc
 !.bash_profile
+!.emacs.d/
+!.emacs.d/**
+
+
