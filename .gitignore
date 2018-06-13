@@ -1,5 +1,6 @@
 *
 !.gitignore
-!scripts/*
+!scripts/
+!scripts/**
 !.bashrc
 !.bash_profile
