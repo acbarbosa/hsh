@@ -42,3 +42,7 @@ command -V gradle >/dev/null 2>&1 || {
 command -V docker >/dev/null 2>&1 || {
     brew cask install docker
 }
+
+if [ ! -e "/usr/local/Cellar/git" ]; then
+    brew install git
+fi
