@@ -46,3 +46,7 @@ command -V docker >/dev/null 2>&1 || {
 if [ ! -e "/usr/local/Cellar/git" ]; then
     brew install git
 fi
+
+if [ ! -e "/Applications/Insomnia.app" ]; then
+    brew cask install insomnia
+fi
