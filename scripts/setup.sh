@@ -15,6 +15,10 @@ if [ ! -e "/Applications/Google Chrome.app" ]; then
     brew cask install google-chrome
 fi
 
+if [ ! -e "/Applications/Firefox.app" ]; then
+    brew cask install firefox
+fi
+
 if [ ! -e "/Applications/Skype.app" ]; then
     brew cask install skype
 fi
