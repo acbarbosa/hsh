@@ -4,6 +4,7 @@ fi
 
 . "$HOME/scripts/bash_initialization/prompt.sh"
 . "$HOME/scripts/bash_initialization/aliases.sh"
+. "$HOME/scripts/bash_initialization/jenv.sh"
 
 
 
