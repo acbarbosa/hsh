@@ -59,6 +59,12 @@ if [ ! -e "/Applications/Postman.app" ]; then
     brew cask install postman
 fi
 
+
+if [ ! -e "$HOME/.nvm" ]; then
+    brew install nvm
+    mkdir $HOME/.nvm
+fi
+
 command -V jenv >/dev/null 2>&1 || {
     brew install jenv
 }
