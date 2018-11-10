@@ -65,6 +65,11 @@ if [ ! -e "$HOME/.nvm" ]; then
     mkdir $HOME/.nvm
 fi
 
+command -V rvm >/dev/null 2>&1 || {
+    bash "$(dirname $0)/rvm-installer.sh" stable --ignore-dotfiles
+}
+
+
 command -V jenv >/dev/null 2>&1 || {
     brew install jenv
 }
