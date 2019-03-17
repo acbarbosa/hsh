@@ -1,0 +1,6 @@
+brew 'emacs'
+brew 'git'
+
+cask 'java'
+cask 'intellij-idea'
+cask 'docker'
