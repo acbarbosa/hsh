@@ -61,6 +61,7 @@
 (load "~/.emacs.d/javascript")
 (load "~/.emacs.d/org-mode")
 (load "~/.emacs.d/windmove")
+(load "~/.emacs.d/markdown-init")
 
 (add-hook 'haskell-mode-hook 'turn-on-haskell-doc-mode)
 (add-hook 'haskell-mode-hook 'turn-on-haskell-indentation)

@@ -1,5 +1,6 @@
 brew 'emacs'
 brew 'git'
+brew 'multimarkdown'
 
 cask 'java'
 cask 'intellij-idea'
