@@ -2,6 +2,7 @@ brew 'emacs'
 brew 'git'
 brew 'multimarkdown'
 brew 'gradle'
+brew 'shellcheck'
 
 cask 'java'
 cask 'intellij-idea-ce'
