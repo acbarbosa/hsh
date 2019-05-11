@@ -14,7 +14,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (markdown-mode projectile magit flycheck editorconfig color-theme))))
+    (cider markdown-mode projectile magit flycheck editorconfig color-theme))))
 (unless package-archive-contents
   (package-refresh-contents))
 (package-install-selected-packages)
