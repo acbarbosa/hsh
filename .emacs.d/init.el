@@ -14,7 +14,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (cider markdown-mode projectile magit flycheck editorconfig color-theme))))
+    (cider markdown-mode projectile magit flycheck editorconfig))))
 (unless package-archive-contents
   (package-refresh-contents))
 (package-install-selected-packages)
@@ -26,12 +26,13 @@
  ;; If there is more than one, they won't work right.
  )
 
-;; Configuring color-theme
-(add-to-list 'load-path "~/.emacs.d/packages/color-theme")
-(require 'color-theme)
-(eval-after-load "color-theme"
-  '(progn (color-theme-initialize)
-          (color-theme-goldenrod)))
+;; Setting up default theme
+(add-to-list 'custom-theme-load-path
+             (file-name-as-directory "~/.emacs.d/themes"))
+
+;; load your favorite theme
+(load-theme 'goldenrod t t)
+(enable-theme 'goldenrod)
 
 ;; Deactivating startup message
 (setq inhibit-startup-message t 
