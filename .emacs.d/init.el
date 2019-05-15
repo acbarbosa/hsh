@@ -29,10 +29,11 @@
 ;; Setting up default theme
 (add-to-list 'custom-theme-load-path
              (file-name-as-directory "~/.emacs.d/themes"))
+(load-theme 'acbarbosa t t)
+(enable-theme 'acbarbosa)
 
-;; load your favorite theme
-(load-theme 'goldenrod t t)
-(enable-theme 'goldenrod)
+;; Deactivate menu bar
+(menu-bar-mode -1)
 
 ;; Deactivating startup message
 (setq inhibit-startup-message t 
