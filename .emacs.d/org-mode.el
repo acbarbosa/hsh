@@ -6,8 +6,8 @@
         (sequence "IN PROGRESS(p)" "|" "CANCELLED(c@/!)" "MEETING(m)")))
 
 ;; Configuring agenda files
-(setq org-agenda-files (list "~/Documents/org-agenda/tw"
-                             "~/Documents/org-agenda"))
+(setq org-agenda-files (list "~/.org-agenda/lean-engineering.org"))
+
 (setq org-log-done t)
 
 ;; Configuring shortcuts
