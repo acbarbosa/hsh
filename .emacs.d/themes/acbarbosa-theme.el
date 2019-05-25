@@ -34,7 +34,22 @@
  '(highlight ((t (:background "dark slate blue"))))
  '(info-menu-5 ((t (:underline t))))
  '(info-node ((t (:bold t))))
- '(info-xref ((t (:bold t :foreground "pale goldenrod")))))
+ '(info-xref ((t (:bold t :foreground "pale goldenrod"))))
+
+ ;; Faces for org-mode
+ '(org-level-1 ((t (:bold t :foreground "red"))))
+
+ ;; Rainbow Delimiters Faces
+ '(rainbow-delimiters-depth-1-face ((t (:bold t :foreground "#FF0000"))))
+ '(rainbow-delimiters-depth-2-face ((t (:bold t :foreground "#00FFFF"))))
+ '(rainbow-delimiters-depth-3-face ((t (:bold t :foreground "#FF8000"))))
+ '(rainbow-delimiters-depth-4-face ((t (:bold t :foreground "#0080FF"))))
+ '(rainbow-delimiters-depth-5-face ((t (:bold t :foreground "#FFFF00"))))
+ '(rainbow-delimiters-depth-6-face ((t (:bold t :foreground "#0000FF"))))
+ '(rainbow-delimiters-depth-7-face ((t (:bold t :foreground "#80FF00"))))
+ '(rainbow-delimiters-depth-8-face ((t (:bold t :foreground "#8000FF"))))
+ '(rainbow-delimiters-depth-9-face ((t (:bold t :foreground "#00FF00"))))
+)
 
 ;;;###autoload
 (when load-file-name
