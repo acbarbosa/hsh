@@ -8,3 +8,6 @@ brew 'nvm'
 cask 'java'
 cask 'intellij-idea-ce'
 cask 'docker'
+
+tap 'heroku/brew'
+brew 'heroku'
