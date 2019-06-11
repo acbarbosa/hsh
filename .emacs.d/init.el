@@ -6,14 +6,8 @@
     '("melpa-stable" . "http://stable.melpa.org/packages/") t)
 (package-initialize)
 
-;; Configuring required packages
-(custom-set-variables
- '(package-selected-packages
-   (quote
-    (cider markdown-mode projectile magit flycheck editorconfig rainbow-delimiters clj-refactor))))
 (unless package-archive-contents
   (package-refresh-contents))
-(package-install-selected-packages)
 
 ;; Setting up default theme
 (add-to-list 'custom-theme-load-path
@@ -34,24 +28,30 @@
 ;; Prevent Extraneous Tabs
 (setq-default indent-tabs-mode nil)
 
-;; Load flycheck
-(require 'flycheck)
-
-;; Configuring editorconfig
-(load "editorconfig")
-(editorconfig-mode 1)
-
 ;; Load other configuration files
 (load "~/.emacs.d/magit-init")
 (load "~/.emacs.d/projectile-init")
 (load "~/.emacs.d/copypaste")
 (load "~/.emacs.d/shell")
 (load "~/.emacs.d/javascript")
+(load "~/.emacs.d/editorconfig")
 (load "~/.emacs.d/org-mode")
 (load "~/.emacs.d/windmove")
 (load "~/.emacs.d/markdown-init")
 (load "~/.emacs.d/elisp-init")
 (load "~/.emacs.d/clojure")
-
-(add-hook 'haskell-mode-hook 'turn-on-haskell-doc-mode)
-(add-hook 'haskell-mode-hook 'turn-on-haskell-indentation)
+(load "~/.emacs.d/haskell")
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   (quote
+    (clj-refactor rainbow-delimiters cider clojure-mode markdown-mode editorconfig flycheck projectile magit))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )

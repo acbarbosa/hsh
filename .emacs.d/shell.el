@@ -1,3 +1,6 @@
+(unless (package-installed-p 'flycheck)
+  (package-install 'flycheck))
+
 ;; Configure shellcheck to run on sh files
 (flycheck-define-checker sh-shellcheck
   "A shell script syntax using Shellcheck"

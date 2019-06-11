@@ -1,3 +1,12 @@
+(unless (package-installed-p 'clojure-mode)
+  (package-install 'clojure-mode))
+(unless (package-installed-p 'cider)
+  (package-install 'cider))
+(unless (package-installed-p 'rainbow-delimiters)
+  (package-install 'rainbow-delimiters))
+(unless (package-installed-p 'clj-refactor)
+  (package-install 'clj-refactor))
+
 (add-hook 'clojure-mode-hook 'rainbow-delimiters-mode)
 (add-hook 'clojure-mode-hook
           (lambda ()
@@ -17,4 +26,4 @@
             (define-key clojure-mode-map (kbd "\C-ct") 'hs-toggle-hiding)
 
             ;; CljRefactor minor mode
-(clj-refactor-mode t)))
+            (clj-refactor-mode t)))
