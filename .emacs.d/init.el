@@ -31,9 +31,6 @@
 ;; Deactivating backup files
 (setq make-backup-files nil)
 
-;; Activating line numbering
-(global-linum-mode 1)
-
 ;; Prevent Extraneous Tabs
 (setq-default indent-tabs-mode nil)
 
