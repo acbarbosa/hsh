@@ -49,7 +49,9 @@
  '(rainbow-delimiters-depth-7-face ((t (:bold t :foreground "#80FF00"))))
  '(rainbow-delimiters-depth-8-face ((t (:bold t :foreground "#8000FF"))))
  '(rainbow-delimiters-depth-9-face ((t (:bold t :foreground "#00FF00"))))
-)
+
+ ;; Line Numbering face
+ '(linum ((t (:background "#202020" :foreground "#00CD00")))))
 
 ;;;###autoload
 (when load-file-name

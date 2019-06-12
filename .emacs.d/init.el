@@ -41,17 +41,7 @@
 (load "~/.emacs.d/elisp-init")
 (load "~/.emacs.d/clojure")
 (load "~/.emacs.d/haskell")
+
 (custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(package-selected-packages
-   (quote
-    (clj-refactor rainbow-delimiters cider clojure-mode markdown-mode editorconfig flycheck projectile magit))))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
+ '(linum-format "%3d "))
+

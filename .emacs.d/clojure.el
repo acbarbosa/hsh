@@ -27,3 +27,5 @@
 
             ;; CljRefactor minor mode
             (clj-refactor-mode t)))
+
+(add-hook 'clojure-mode-hook 'linum-mode)
