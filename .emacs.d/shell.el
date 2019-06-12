@@ -2,6 +2,7 @@
   (package-install 'flycheck))
 
 ;; Configure shellcheck to run on sh files
+(require 'flycheck)
 (flycheck-define-checker sh-shellcheck
   "A shell script syntax using Shellcheck"
   :command ("shellcheck" "-f" "checkstyle"
