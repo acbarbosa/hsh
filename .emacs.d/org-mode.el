@@ -16,3 +16,6 @@
 (define-key global-map (kbd "<f11>") 'org-capture)
 (define-key global-map (kbd "<f9> i") 'org-agenda-clock-in)
 (define-key global-map (kbd "<f9> o") 'org-agenda-clock-out)
+
+;; Configuring org-mode
+(add-hook 'org-mode-hook 'visual-line-mode)
