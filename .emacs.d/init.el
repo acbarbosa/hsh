@@ -41,6 +41,7 @@
 (load "~/.emacs.d/elisp-init")
 (load "~/.emacs.d/clojure")
 (load "~/.emacs.d/haskell")
+(load "~/.emacs.d/typescript")
 
 (custom-set-variables
  '(linum-format "%3d "))
