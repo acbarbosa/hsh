@@ -3,5 +3,6 @@ cask 'caskroom/fonts/font-hack'
 
 cask '1password'
 cask 'firefox'
+cask 'chromium'
 cask 'skype'
 
