@@ -13,3 +13,4 @@ tap 'heroku/brew'
 brew 'heroku'
 
 brew 'circleci', args: ["ignore-dependencies"]
+brew 'wakatime-cli'
