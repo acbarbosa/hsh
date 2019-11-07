@@ -3,7 +3,9 @@
 (add-to-list 'package-archives
     '("marmalade" . "http://marmalade-repo.org/packages/"))
 (add-to-list 'package-archives
-    '("melpa-stable" . "http://stable.melpa.org/packages/") t)
+             '("melpa-stable" . "http://stable.melpa.org/packages/") t)
+(add-to-list 'package-archives
+             '("melpa" . "http://melpa.org/packages/") t)
 (package-initialize)
 
 (unless package-archive-contents
@@ -42,7 +44,10 @@
 (load "~/.emacs.d/clojure")
 (load "~/.emacs.d/haskell")
 (load "~/.emacs.d/typescript")
+(load "~/.emacs.d/wakatime")
 
 (custom-set-variables
- '(linum-format "%3d "))
-
+ '(linum-format "%3d ")
+ '(package-selected-packages
+   (quote
+    (wakatime-mode web-mode tide terraform-mode rainbow-delimiters projectile markdown-mode magit editorconfig company clj-refactor))))
