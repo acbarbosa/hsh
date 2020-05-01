@@ -17,7 +17,10 @@
    (quote (use-package))))
 
 (package-install-selected-packages)
+
+;; use-package configuration
 (require 'use-package)
+(setq use-package-hook-name-suffix nil)
 
 ;; Setting up default theme
 (add-to-list 'custom-theme-load-path
