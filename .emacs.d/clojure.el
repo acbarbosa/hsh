@@ -1,31 +1,25 @@
-(unless (package-installed-p 'clojure-mode)
-  (package-install 'clojure-mode))
-(unless (package-installed-p 'cider)
-  (package-install 'cider))
-(unless (package-installed-p 'rainbow-delimiters)
-  (package-install 'rainbow-delimiters))
-(unless (package-installed-p 'clj-refactor)
-  (package-install 'clj-refactor))
+(use-package clojure-mode
+  :ensure t
+  :bind (:map clojure-mode-map
+              ("C-c -" . hs-hide-all)
+              ("C-c +" . hs-show-all)
+              ("C-c t" . hs-toggle-hiding))
+  :hook ((clojure-mode-hook . linum-mode)
+         (clojure-mode-hook . show-paren-mode)
+         (clojure-mode-hook . electric-pair-mode)
+         (clojure-mode-hook . hs-minor-mode))
+  :init
+  (setq show-paren-style 'mixed)
+  (setq electric-pair-preserve-balance t)
+  (setq electric-pair-delete-adjacent-pairs t))
 
-(add-hook 'clojure-mode-hook 'rainbow-delimiters-mode)
-(add-hook 'clojure-mode-hook
-          (lambda ()
-            ;; Paren minor mode
-            (show-paren-mode)
-            (setq show-paren-style 'mixed)
+(use-package cider
+  :ensure t)
 
-            ;; ElectricPair minor-mode
-            (electric-pair-mode)
-            (setq electric-pair-preserve-balance t)
-            (setq electric-pair-delete-adjacen-pairs t)
+(use-package rainbow-delimiters
+  :ensure t
+  :hook (clojure-mode-hook . rainbow-delimiters-mode))
 
-            ;; HideShow minor mode
-            (hs-minor-mode)
-            (define-key clojure-mode-map (kbd "\C-c-") 'hs-hide-all)
-            (define-key clojure-mode-map (kbd "\C-c+") 'hs-show-all)
-            (define-key clojure-mode-map (kbd "\C-ct") 'hs-toggle-hiding)
-
-            ;; CljRefactor minor mode
-            (clj-refactor-mode t)))
-
-(add-hook 'clojure-mode-hook 'linum-mode)
+(use-package clj-refactor
+  :ensure t
+  :hook (clojure-mode-hook . clj-refactor-mode))
