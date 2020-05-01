@@ -50,4 +50,5 @@
  '(linum-format "%3d ")
  '(package-selected-packages
    (quote
-    (wakatime-mode web-mode tide terraform-mode rainbow-delimiters projectile markdown-mode magit editorconfig company clj-refactor))))
+    (perfect-margin wakatime-mode web-mode tide terraform-mode rainbow-delimiters projectile markdown-mode magit editorconfig company clj-refactor))))
+
