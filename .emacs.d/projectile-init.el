@@ -1,4 +1,3 @@
-(unless (package-installed-p 'projectile)
-  (package-install 'projectile))
-
-(global-set-key (kbd "C-c pf") 'projectile-find-file)
+(use-package projectile
+  :ensure t
+  :bind ("C-c pf" . 'projectile-find-file))
