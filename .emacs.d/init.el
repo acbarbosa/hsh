@@ -11,6 +11,8 @@
 (unless package-archive-contents
   (package-refresh-contents))
 
+(setq custom-file null-device)
+
 (custom-set-variables
  '(linum-format "%3d ")
  '(package-selected-packages
