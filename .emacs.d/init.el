@@ -44,17 +44,9 @@
 (setq-default indent-tabs-mode nil)
 
 ;; Load other configuration files
-(load "~/.emacs.d/magit-init")
-(load "~/.emacs.d/projectile-init")
-(load "~/.emacs.d/copypaste")
-(load "~/.emacs.d/shell")
-(load "~/.emacs.d/javascript")
-(load "~/.emacs.d/editorconfig")
-(load "~/.emacs.d/org-mode")
-(load "~/.emacs.d/windmove")
-(load "~/.emacs.d/markdown-init")
-(load "~/.emacs.d/elisp-init")
-(load "~/.emacs.d/clojure")
-(load "~/.emacs.d/haskell")
-(load "~/.emacs.d/typescript")
-(load "~/.emacs.d/wakatime")
+(defun load-directory (dir)
+  (let ((load-it (lambda (f)
+                   (load-file (concat (file-name-as-directory dir) f)))))
+    (mapc load-it (directory-files dir nil "\\.el$"))))
+(load-directory "~/.emacs.d/config/")
+
