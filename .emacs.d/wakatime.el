@@ -1,3 +1,6 @@
-(setq wakatime-api-key (getenv "WAKATIME_API_TOKEN"))
-(setq wakatime-cli-path "/usr/local/bin/wakatime")
-(global-wakatime-mode)
+(use-package wakatime-mode
+  :ensure t
+  :init 
+  (setq wakatime-api-key (getenv "WAKATIME_API_TOKEN"))
+  (setq wakatime-cli-path "/usr/local/bin/wakatime")
+  (global-wakatime-mode))

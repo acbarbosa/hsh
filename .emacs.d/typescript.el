@@ -1,30 +1,16 @@
-(unless (package-installed-p 'tide)
-  (package-install 'tide))
-(unless (package-installed-p 'company)
-  (package-install 'company))
+(use-package company
+  :ensure t)
 
-(defun setup-tide-mode ()
-  (interactive)
-  (tide-setup)
-  (flycheck-mode +1)
-  (setq flycheck-check-syntax-automatically '(save mode-enabled))
-  (eldoc-mode +1)
-  (tide-hl-identifier-mode +1)
-  (company-mode +1)
-  (linum-mode +1))
 
-(setq company-tooltip-align-notations t)
+(use-package tide
+  :ensure t
+  :after  (typescript-mode company flycheck)
+  :hook   ((typescript-mode-hook . tide-setup)
+           (typescript-mode-hook . tide-hl-identifier-mode)
+           (typescript-mode-hook . linum-mode)
+           (before-save-hook . tide-format-before-save)))
 
-(add-hook 'typescript-mode-hook #'setup-tide-mode)
-
-;; TSX
-(unless (package-installed-p 'web-mode)
-  (package-install 'web-mode))
-(require 'web-mode)
-(add-to-list 'auto-mode-alist '("\\.tsx\\'" . web-mode))
-(add-hook 'web-mode-hook
-          (lambda ()
-            (when (string-equal "tsx" (file-name-extension buffer-file-name))
-              (setup-tide-mode))))
-;; enable typescript-tslint checker
-(flycheck-add-mode 'typescript-tslint 'web-mode)
+(use-package web-mode
+  :ensure t
+  :mode   ("\\.tsx\\'" . web-mode)
+  :hook   (web-mode-hook . typescript-mode))

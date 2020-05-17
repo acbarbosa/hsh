@@ -1,7 +1,7 @@
 ;; Setting up Marmalade repo
 (require 'package)
 (add-to-list 'package-archives
-    '("marmalade" . "http://marmalade-repo.org/packages/"))
+             '("marmalade" . "http://marmalade-repo.org/packages/"))
 (add-to-list 'package-archives
              '("melpa-stable" . "http://stable.melpa.org/packages/") t)
 (add-to-list 'package-archives
@@ -10,6 +10,19 @@
 
 (unless package-archive-contents
   (package-refresh-contents))
+
+(setq custom-file null-device)
+
+(custom-set-variables
+ '(linum-format "%3d ")
+ '(package-selected-packages
+   (quote (use-package))))
+
+(package-install-selected-packages)
+
+;; use-package configuration
+(require 'use-package)
+(setq use-package-hook-name-suffix nil)
 
 ;; Setting up default theme
 (add-to-list 'custom-theme-load-path
@@ -45,10 +58,3 @@
 (load "~/.emacs.d/haskell")
 (load "~/.emacs.d/typescript")
 (load "~/.emacs.d/wakatime")
-
-(custom-set-variables
- '(linum-format "%3d ")
- '(package-selected-packages
-   (quote
-    (perfect-margin wakatime-mode web-mode tide terraform-mode rainbow-delimiters projectile markdown-mode magit editorconfig company clj-refactor))))
-
