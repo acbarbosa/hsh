@@ -19,6 +19,11 @@ setup_brew() {
     brew bundle --file="${SCRIPT_DIR}/Brewfile.clojure" -v
 }
 
+setup_rvm() {
+    [ ! -d "${HOME}/.rvm" ] && curl -sSL https://get.rvm.io | bash -s stable
+}
+
 setup_brew
+setup_rvm
 
 [ ! -d "${HOME}/.nvm" ] && mkdir "${HOME}/.nvm"
