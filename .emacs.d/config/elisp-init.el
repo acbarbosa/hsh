@@ -2,9 +2,14 @@
   :ensure t
   :hook (emacs-lisp-mode-hook . rainbow-delimiters-mode))
 
+(use-package parinfer
+  :ensure t
+  :hook   (emacs-lisp-mode-hook . parinfer-mode))
+
 (add-hook 'emacs-lisp-mode-hook
           (lambda ()
             (show-paren-mode)
             (setq show-paren-style 'expression)
             (eldoc-mode)
             (linum-mode)))
+  
