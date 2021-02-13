@@ -12,9 +12,6 @@ if [ ! -d /usr/local/Frameworks ]; then
 fi
 
 brew update && brew upgrade
-
-brew bundle --file="${SCRIPT_DIR}/Brewfile" -v
-brew bundle --file="${SCRIPT_DIR}/Brewfile.developer" -v
-brew bundle --file="${SCRIPT_DIR}/Brewfile.clojure" -v
+brew bundle --cleanup -v --file="${SCRIPT_DIR}/Brewfile"
 
 [ ! -d "${HOME}/.nvm" ] && mkdir "${HOME}/.nvm"
