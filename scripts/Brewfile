@@ -27,6 +27,7 @@ brew 'heroku-node'
 brew 'awscli'
 cask 'docker'
 brew 'circleci', args: ["ignore-dependencies"]
+brew 'pulumi'
 
 # IDEs & Helpers
 cask 'intellij-idea-ce'
