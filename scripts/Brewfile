@@ -23,6 +23,7 @@ brew 'git'
 # Cloud & CI
 tap 'heroku/brew'
 brew 'heroku'
+brew 'heroku-node'
 brew 'awscli'
 cask 'docker'
 brew 'circleci', args: ["ignore-dependencies"]
