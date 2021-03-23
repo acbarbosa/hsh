@@ -1,5 +1,8 @@
 (use-package projectile
   :ensure t
   :init
+  (projectile-mode +1)
   (setq projectile-completion-system 'ido)
-  :bind ("C-c pf" . 'projectile-find-file))
+  (setq projectile-use-git-grep t)
+  :bind (:map projectile-mode-map
+              ("C-c p" . projectile-command-map)))
