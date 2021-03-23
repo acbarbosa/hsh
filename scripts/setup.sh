@@ -15,3 +15,11 @@ brew update && brew upgrade
 brew bundle --cleanup -v --file="${SCRIPT_DIR}/Brewfile"
 
 [ ! -d "${HOME}/.nvm" ] && mkdir "${HOME}/.nvm"
+
+# Install node global packages
+. "$(brew --prefix nvm)/nvm.sh"
+nvm use default
+while IFS= read -r module
+do
+    npm install -g "${module}"
+done < "${SCRIPT_DIR}/node_global_modules"
