@@ -30,7 +30,7 @@
    `(mode-line ((t (:background ,base-3 :foreground ,base-01))))
    `(mode-line-inactive ((t (:background ,base-02 :foreground ,base-1))))
    `(vertical-border ((t (:background ,base-01 :foreground ,base-1))))
-   `(header-line ((t (:background ,red))))
+   `(header-line ((t (:background ,base-02 : foreground ,base-1))))
    `(region ((t (:background ,base-3))))
    `(isearch ((t (:bold t :background ,base-2 :foreground ,base-01))))
    `(query-replace ((t (:bold t :background ,base-02 :foreground ,base-1))))
