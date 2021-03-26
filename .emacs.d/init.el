@@ -43,6 +43,16 @@
 ;; Prevent Extraneous Tabs
 (setq-default indent-tabs-mode nil)
 
+;; Configuring modeline
+(setq-default mode-line-format
+      '("%e"
+        mode-line-modified
+        "  "
+        mode-line-buffer-identification
+        "  "
+        mode-line-position
+        "%m"))
+
 ;; Load other configuration files
 (defun load-directory (dir)
   (let ((load-it (lambda (f)
