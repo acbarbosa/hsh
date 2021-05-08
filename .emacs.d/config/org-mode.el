@@ -1,7 +1,7 @@
 (use-package org
   :ensure t
-  :hook (org-mode-hook visual-line-mode)
-  :mode ("\\.org\\'" . org-mode)
+  :hook (org-mode-hook . visual-line-mode)
+  :mode ("\\.org" . org-mode)
   :bind (([f12]  . org-agenda)
          ("C-c c" . org-capture)
          ("<f9> i" . org-clock-in)
