@@ -1,28 +1,30 @@
-;; Setting up Marmalade repo
-(require 'package)
-(add-to-list 'package-archives
-             '("marmalade" . "http://marmalade-repo.org/packages/"))
-(add-to-list 'package-archives
-             '("melpa-stable" . "http://stable.melpa.org/packages/") t)
-(add-to-list 'package-archives
-             '("melpa" . "http://melpa.org/packages/") t)
-(package-initialize)
+;; Disable package.el in favor of straight.el
+(setq package-enable-at-startup nil)
 
-(unless package-archive-contents
-  (package-refresh-contents))
+;; Installs straight.el
+(defvar bootstrap-version)
+(let ((bootstrap-file
+       (expand-file-name "straight/repos/straight.el/bootstrap.el" user-emacs-directory))
+      (bootstrap-version 5))
+  (unless (file-exists-p bootstrap-file)
+    (with-current-buffer
+        (url-retrieve-synchronously
+         "https://raw.githubusercontent.com/raxod502/straight.el/develop/install.el"
+         'silent 'inhibit-cookies)
+      (goto-char (point-max))
+      (eval-print-last-sexp)))
+  (load bootstrap-file nil 'nomessage))
+
+;; Install use-package
+(straight-use-package 'use-package)
+(setq use-package-hook-name-suffix nil)
+(setq debug-on-error t)
+
+;; Configures use-package to always use straight.el
+(use-package straight
+	     :custom (straight-use-package-by-default t))
 
 (setq custom-file null-device)
-
-(custom-set-variables
- '(linum-format "%3d ")
- '(package-selected-packages
-   (quote (use-package))))
-
-(package-install-selected-packages)
-
-;; use-package configuration
-(require 'use-package)
-(setq use-package-hook-name-suffix nil)
 
 ;; Setting up default theme
 (add-to-list 'custom-theme-load-path

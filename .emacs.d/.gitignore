@@ -2,3 +2,9 @@ elpa
 auto-save-list
 network-security.data
 transient/
+straight/
+.cache/
+.dap-breakpoints
+.lsp-session-v1
+eclipse.jdt.ls/
+workspace

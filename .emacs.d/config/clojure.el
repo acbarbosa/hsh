@@ -1,5 +1,4 @@
 (use-package clojure-mode
-  :ensure t
   :bind (:map clojure-mode-map
               ("C-c -" . hs-hide-all)
               ("C-c +" . hs-show-all)

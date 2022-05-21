@@ -1,13 +1,10 @@
-(use-package company
-  :ensure t)
+(use-package company)
 
 (use-package which-key
-  :ensure t
   :config
   (which-key-mode))
   
 (use-package lsp-mode
-  :ensure t
   :after (company which-key)
   :init
   (setq lsp-keymap-prefix "C-c l")
