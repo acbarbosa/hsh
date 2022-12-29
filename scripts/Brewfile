@@ -15,7 +15,7 @@ cask 'zoom'
 cask 'spotify'
 
 # Programming Languages & tools
-cask 'java'
+brew 'java'
 brew 'gradle'
 brew 'nvm'
 brew 'leiningen'
