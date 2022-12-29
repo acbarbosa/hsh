@@ -13,6 +13,7 @@ cask 'slack'
 cask 'inkscape'
 cask 'zoom'
 cask 'spotify'
+cask 'android-file-transfer'
 
 # Programming Languages & tools
 brew 'java'
