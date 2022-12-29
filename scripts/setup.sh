@@ -1,9 +1,9 @@
-#!/bin/bash
+#!/bin/zsh
 
 SCRIPT_DIR="$( cd "$( dirname "$0" )" && pwd )"
 
 command -V brew > /dev/null 2>&1 || {
-    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 }
 
 if [ ! -d /usr/local/Frameworks ]; then
