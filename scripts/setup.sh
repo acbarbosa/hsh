@@ -18,7 +18,10 @@ brew bundle --cleanup -v --file="${SCRIPT_DIR}/Brewfile"
 
 # Install node global packages
 . "$(brew --prefix nvm)/nvm.sh"
+
+nvm install --lts --latest-npm --default
 nvm use default
+
 while IFS= read -r module
 do
     npm install -g "${module}"
