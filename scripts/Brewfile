@@ -37,4 +37,4 @@ brew 'pulumi'
 # IDEs & Helpers
 cask 'emacs'
 brew 'multimarkdown'
-
+brew 'shellcheck'
