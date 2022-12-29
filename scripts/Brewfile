@@ -33,8 +33,6 @@ brew 'circleci', args: ["ignore-dependencies"]
 brew 'pulumi'
 
 # IDEs & Helpers
-cask 'intellij-idea-ce'
 cask 'emacs'
 brew 'multimarkdown'
-brew 'shellcheck'
-brew 'wakatime-cli'
+
