@@ -31,7 +31,7 @@ brew 'pulumi'
 
 # IDEs & Helpers
 cask 'intellij-idea-ce'
-brew 'emacs'
+cask 'emacs'
 brew 'multimarkdown'
 brew 'shellcheck'
 brew 'wakatime-cli'
