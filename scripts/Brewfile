@@ -1,8 +1,10 @@
 tap 'homebrew/cask'
 tap 'caskroom/fonts'
 cask 'caskroom/fonts/font-hack'
+tap 'homebrew/cask-versions'
 
-cask '1password'
+# Fonts
+cask '1password6'
 cask 'firefox'
 cask 'chromium'
 cask 'skype'
