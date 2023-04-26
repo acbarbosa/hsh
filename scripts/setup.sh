@@ -26,3 +26,9 @@ while IFS= read -r module
 do
     npm install -g "${module}"
 done < "${SCRIPT_DIR}/node_global_modules"
+
+
+# Install RVM (Ruby Version Manager)
+command -V rvm > /dev/null 2>&1 || {
+    curl -sSL https://get.rvm.io | bash
+}
