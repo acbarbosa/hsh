@@ -25,6 +25,9 @@ brew 'leiningen'
 # Development Tools
 brew 'git'
 
+# Libraries
+brew 'openssl'
+
 # Cloud & CI
 tap 'heroku/brew'
 brew 'heroku'
