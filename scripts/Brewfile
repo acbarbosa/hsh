@@ -27,6 +27,8 @@ brew 'git'
 
 # Libraries
 brew 'openssl'
+brew 'gmp'
+brew 'libyaml'
 
 # Cloud & CI
 tap 'heroku/brew'
