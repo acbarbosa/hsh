@@ -9,3 +9,6 @@
 !.emacs.d/
 !.emacs.d/**
 !.gitconfig
+.emacs.d/projects
+.emacs.d/projectile-bookmarks.eld
+scripts/Brewfile.lock.json
