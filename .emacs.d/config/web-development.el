@@ -5,3 +5,5 @@
          ("\\.tsx\\'" . web-mode))
   :hook (web-mode-hook . lsp)
   :commands lsp)
+
+(add-to-list 'lsp-language-id-configuration '("\\.scss\\'" . "scss"))

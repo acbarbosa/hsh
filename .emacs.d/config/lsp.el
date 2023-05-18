@@ -10,8 +10,6 @@
   :after (company which-key)
   :init
   (setq lsp-keymap-prefix "C-c l")
-  :config
-  (add-to-list 'lsp-language-id-configuration '(web-mode . "scss"))
   :hook ((lsp-mode-hook . lsp-enable-which-key-integration)
          (lsp-mode-hook . yas-minor-mode))
   :commands lsp)
