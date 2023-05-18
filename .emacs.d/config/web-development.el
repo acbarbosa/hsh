@@ -1,7 +1,8 @@
 (use-package css-mode
   :straight (:type built-in)
   :hook ((css-mode-hook . lsp)
-         (css-mode-hook . hs-minor-mode))
+         (css-mode-hook . hs-minor-mode)
+         (css-mode-hook . electric-pair-mode))
   :commands lsp)
 
 (add-to-list 'lsp-language-id-configuration '("\\.scss\\'" . "scss"))
