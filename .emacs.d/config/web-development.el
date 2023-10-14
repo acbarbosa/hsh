@@ -1,6 +1,7 @@
 (use-package css-mode
   :straight (:type built-in)
   :hook ((css-mode-hook . lsp)
+         (css-mode-hook . linum-mode)
          (css-mode-hook . hs-minor-mode)
          (css-mode-hook . electric-pair-mode))
   :commands lsp)
