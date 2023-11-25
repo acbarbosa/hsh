@@ -1,8 +1,11 @@
 tap 'homebrew/cask'
-tap 'caskroom/fonts'
-cask 'caskroom/fonts/font-hack'
+tap 'homebrew/cask-versions'
 
-cask '1password'
+# Fonts
+tap 'homebrew/cask-fonts'
+cask 'font-hack'
+
+cask 'enpass'
 cask 'firefox'
 cask 'chromium'
 cask 'skype'
@@ -10,15 +13,22 @@ cask 'slack'
 cask 'inkscape'
 cask 'zoom'
 cask 'spotify'
+cask 'android-file-transfer'
+cask 'google-drive'
 
 # Programming Languages & tools
-cask 'java'
+brew 'java'
 brew 'gradle'
 brew 'nvm'
 brew 'leiningen'
 
 # Development Tools
 brew 'git'
+
+# Libraries
+brew 'openssl'
+brew 'gmp'
+brew 'libyaml'
 
 # Cloud & CI
 tap 'heroku/brew'
@@ -30,8 +40,6 @@ brew 'circleci', args: ["ignore-dependencies"]
 brew 'pulumi'
 
 # IDEs & Helpers
-cask 'intellij-idea-ce'
-brew 'emacs'
+cask 'emacs'
 brew 'multimarkdown'
 brew 'shellcheck'
-brew 'wakatime-cli'

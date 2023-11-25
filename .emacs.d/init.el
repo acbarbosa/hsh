@@ -55,6 +55,9 @@
         mode-line-position
         "%m"))
 
+;; Adds svg to list of supported image formats
+(add-to-list 'image-types 'svg)
+
 ;; Load other configuration files
 (defun load-directory (dir)
   (let ((load-it (lambda (f)

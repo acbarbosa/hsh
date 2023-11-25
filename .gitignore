@@ -3,8 +3,12 @@
 !scripts/
 !scripts/**
 !.bashrc
+!.zshrc
 !.bash_profile
+!.zprofile
 !.emacs.d/
 !.emacs.d/**
 !.gitconfig
-
+.emacs.d/projects
+.emacs.d/projectile-bookmarks.eld
+scripts/Brewfile.lock.json

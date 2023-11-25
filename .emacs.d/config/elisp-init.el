@@ -17,5 +17,5 @@
             (show-paren-mode)
             (setq show-paren-style 'expression)
             (eldoc-mode)
-            (linum-mode)))
+            (display-line-numbers-mode)))
   
