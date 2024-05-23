@@ -32,3 +32,6 @@ done < "${SCRIPT_DIR}/node_global_modules"
 command -V rvm > /dev/null 2>&1 || {
     curl -sSL https://get.rvm.io | bash
 }
+
+# Install Rust
+rustup-init

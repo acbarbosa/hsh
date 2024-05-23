@@ -21,6 +21,7 @@ brew 'java'
 brew 'gradle'
 brew 'nvm'
 brew 'leiningen'
+brew 'rustup'
 
 # Development Tools
 brew 'git'
