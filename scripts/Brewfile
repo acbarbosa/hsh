@@ -23,6 +23,7 @@ brew 'gradle'
 brew 'nvm'
 brew 'leiningen'
 brew 'rustup'
+brew 'cmake'
 
 # Development Tools
 brew 'git'
@@ -31,6 +32,7 @@ brew 'git'
 brew 'openssl'
 brew 'gmp'
 brew 'libyaml'
+brew 'libtool'
 
 # Cloud & CI
 tap 'heroku/brew'
