@@ -1,5 +1,6 @@
 tap 'homebrew/cask'
 tap 'homebrew/cask-versions'
+tap 'd12frosted/emacs-plus'
 
 # Fonts
 tap 'homebrew/cask-fonts'
@@ -41,6 +42,6 @@ brew 'circleci', args: ["ignore-dependencies"]
 brew 'pulumi'
 
 # IDEs & Helpers
-cask 'emacs'
+brew 'emacs-plus', args: ["without-cocoa", "with-native-comp", ]
 brew 'multimarkdown'
 brew 'shellcheck'
