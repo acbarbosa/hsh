@@ -1,9 +1,6 @@
-tap 'homebrew/cask'
-tap 'homebrew/cask-versions'
 tap 'd12frosted/emacs-plus'
 
 # Fonts
-tap 'homebrew/cask-fonts'
 cask 'font-hack'
 
 cask 'enpass'
